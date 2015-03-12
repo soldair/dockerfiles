@@ -1,5 +1,5 @@
 build: Dockerfile
-	docker build -t mini-elasticsearch .
+	docker build -t soldair-mini-elasticsearch .
 
 tag:
-	docker tag mini-elasticsearch luislavena/mini-elasticsearch
+	docker tag soldair-mini-elasticsearch soldair/soldair-mini-elasticsearch

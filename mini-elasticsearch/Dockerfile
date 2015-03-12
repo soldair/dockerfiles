@@ -4,7 +4,7 @@ MAINTAINER Luis Lavena <luislavena@gmail.com>
 # FIXME: perhaps all containers can benefit from these packages?
 RUN apk-install ca-certificates wget
 
-ENV ELASTICSEARCH_VERSION 1.2.2
+ENV ELASTICSEARCH_VERSION 1.4.4
 
 RUN \
   mkdir -p /opt && \
