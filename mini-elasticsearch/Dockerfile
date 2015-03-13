@@ -1,15 +1,15 @@
 FROM       luislavena/mini-java
-MAINTAINER Luis Lavena <luislavena@gmail.com>
+MAINTAINER Ryan day <soldair@gmail.com>
 
 # FIXME: perhaps all containers can benefit from these packages?
-RUN apk-install ca-certificates wget
+RUN apk-install ca-certificates curl
 
 ENV ELASTICSEARCH_VERSION 1.4.4
 
 RUN \
   mkdir -p /opt && \
   cd /tmp && \
-  wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-$ELASTICSEARCH_VERSION.tar.gz && \
+  curl https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-$ELASTICSEARCH_VERSION.tar.gz > elasticsearch-$ELASTICSEARCH_VERSION.tar.gz && \
   tar -xzf elasticsearch-$ELASTICSEARCH_VERSION.tar.gz && \
   rm -rf elasticsearch-$ELASTICSEARCH_VERSION.tar.gz && \
   mv elasticsearch-$ELASTICSEARCH_VERSION /opt/elasticsearch
